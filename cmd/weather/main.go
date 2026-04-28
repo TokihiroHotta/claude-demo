@@ -90,6 +90,8 @@ func main() {
 	fmt.Printf("降水確率　　: %d%%\n", weather.Daily.PrecipitationProb[1])
 	fmt.Println("=========================")
 	fmt.Println("=========================")
+	fmt.Println("+++++++++++++++++++++++++")
+
 }
 
 func weekdayJP(w time.Weekday) string {
