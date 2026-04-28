@@ -10,12 +10,12 @@ import (
 // open-meteo API のレスポンス構造体
 type WeatherResponse struct {
 	Daily struct {
-		Time                []string  `json:"time"`
-		WeatherCode         []int     `json:"weathercode"`
-		TemperatureMax      []float64 `json:"temperature_2m_max"`
-		TemperatureMin      []float64 `json:"temperature_2m_min"`
-		PrecipitationSum    []float64 `json:"precipitation_sum"`
-		PrecipitationProb   []int     `json:"precipitation_probability_max"`
+		Time              []string  `json:"time"`
+		WeatherCode       []int     `json:"weathercode"`
+		TemperatureMax    []float64 `json:"temperature_2m_max"`
+		TemperatureMin    []float64 `json:"temperature_2m_min"`
+		PrecipitationSum  []float64 `json:"precipitation_sum"`
+		PrecipitationProb []int     `json:"precipitation_probability_max"`
 	} `json:"daily"`
 }
 
@@ -88,6 +88,7 @@ func main() {
 	fmt.Printf("最低気温　　: %.1f°C\n", weather.Daily.TemperatureMin[1])
 	fmt.Printf("降水量　　　: %.1f mm\n", weather.Daily.PrecipitationSum[1])
 	fmt.Printf("降水確率　　: %d%%\n", weather.Daily.PrecipitationProb[1])
+	fmt.Println("=========================")
 }
 
 func weekdayJP(w time.Weekday) string {
